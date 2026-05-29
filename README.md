@@ -2,7 +2,7 @@
 
 ## Autora
 
-Anna Beatriz Gallo  
+Anna Gallo  
 Graduação em Segurança Cibernética  
 Faculdade SENAI 1.34 Paulo Antonio Skaf
 
