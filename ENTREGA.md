@@ -31,7 +31,7 @@ client/client_encrypt_upload.py
 server/Dockerfile  
 server/requirements.txt  
 server/server_process.py  
-docs/relatorio_anna_beatriz_gallo.pdf  
+docs/Relatório Técnico - INFRAESTRUTURA DE CRIPTOGRAFIA HOMOMÓRFICA EM AMBIENTE DE NUVEM SIMULADO COM CONTAINER - Anna Beatriz Gallo.pdf  
 evidencias/prints_infraestrutura_criptografia_homomorfica.pdf  
 resultados/resultado_final.json  
 resultados/server_log.json  
