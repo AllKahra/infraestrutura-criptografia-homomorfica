@@ -1,0 +1,48 @@
+{
+  "por_clinica": {
+    "Clinica_Alpha": {
+      "Norte": {
+        "soma": 90,
+        "soma_ponderada": 180,
+        "quantidade": 2,
+        "media": 45.0
+      }
+    },
+    "Clinica_Beta": {
+      "Sul": {
+        "soma": 135,
+        "soma_ponderada": 270,
+        "quantidade": 3,
+        "media": 45.0
+      }
+    },
+    "Clinica_Gamma": {
+      "Leste": {
+        "soma": 105,
+        "soma_ponderada": 210,
+        "quantidade": 3,
+        "media": 35.0
+      }
+    }
+  },
+  "por_regiao": {
+    "Norte": {
+      "soma": 90,
+      "soma_ponderada": 180,
+      "quantidade": 2,
+      "media": 45.0
+    },
+    "Sul": {
+      "soma": 135,
+      "soma_ponderada": 270,
+      "quantidade": 3,
+      "media": 45.0
+    },
+    "Leste": {
+      "soma": 105,
+      "soma_ponderada": 210,
+      "quantidade": 3,
+      "media": 35.0
+    }
+  }
+}

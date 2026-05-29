@@ -1,0 +1,42 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Docker / LocalStack
+localstack-data/
+.localstack/
+*.log
+
+# Arquivos sensíveis / chaves
+output/client/context_private.tenseal
+**/context_private.tenseal
+*.key
+*.pem
+.env
+.env.*
+
+# Cache e temporários
+tmp/
+cache/
+*.tmp
+*.bak
+*.swp
+
+# Arquivos grandes desnecessários
+*.tar
+*.tar.gz
+*.zip
+
+# IDEs
+.vscode/
+.idea/

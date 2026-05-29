@@ -1,0 +1,73 @@
+services:
+  localstack:
+    container_name: localstack
+    image: localstack/localstack:3.7.2
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3,sqs,lambda,iam,logs
+      - AWS_DEFAULT_REGION=us-east-1
+      - LOCALSTACK_HOST=localstack
+      - LAMBDA_DOCKER_NETWORK=he-cloud-net
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - he-cloud-net
+
+  client:
+    build: ./client
+    container_name: he-client
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+      - S3_ENDPOINT_URL=http://localstack:4566
+      - BUCKET_NAME=healthdata-he
+    volumes:
+      - ./output/client:/app/client_output
+    depends_on:
+      - localstack
+    networks:
+      - he-cloud-net
+
+  server:
+    build: ./server
+    container_name: he-server
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+      - S3_ENDPOINT_URL=http://localstack:4566
+      - BUCKET_NAME=healthdata-he
+    volumes:
+      - ./output/server:/app/server_output
+    depends_on:
+      - localstack
+    networks:
+      - he-cloud-net
+
+  api:
+    build: ./api
+    container_name: he-api
+    hostname: he-api
+    ports:
+      - "8000:8000"
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+      - S3_ENDPOINT_URL=http://localstack:4566
+      - BUCKET_NAME=healthdata-he
+      - SQS_QUEUE_NAME=he-bonus-queue
+    volumes:
+      - ./output/api:/app/api_output
+    depends_on:
+      - localstack
+    networks:
+      - he-cloud-net
+
+networks:
+  he-cloud-net:
+    name: he-cloud-net
+    driver: bridge

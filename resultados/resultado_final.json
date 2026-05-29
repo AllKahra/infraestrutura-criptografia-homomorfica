@@ -1,0 +1,17 @@
+{
+  "Norte": {
+    "soma": 90,
+    "quantidade": 2,
+    "media": 45.0
+  },
+  "Sul": {
+    "soma": 135,
+    "quantidade": 3,
+    "media": 45.0
+  },
+  "Leste": {
+    "soma": 105,
+    "quantidade": 3,
+    "media": 35.0
+  }
+}
