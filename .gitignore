@@ -17,7 +17,7 @@ localstack-data/
 .localstack/
 *.log
 
-# Arquivos sensíveis / chaves
+# Chaves e segredos
 output/client/context_private.tenseal
 **/context_private.tenseal
 *.key
@@ -25,18 +25,18 @@ output/client/context_private.tenseal
 .env
 .env.*
 
-# Cache e temporários
+# Temporários
 tmp/
 cache/
 *.tmp
 *.bak
 *.swp
 
-# Arquivos grandes desnecessários
+# Pacotes locais
+*.zip
 *.tar
 *.tar.gz
-*.zip
 
-# IDEs
+# IDE
 .vscode/
 .idea/

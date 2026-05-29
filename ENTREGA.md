@@ -38,4 +38,4 @@ resultados/server_log.json
 
 ## Observação de segurança
 
-A chave secreta context_private.tenseal não foi versionada no GitHub, pois representa material sensível. A evidência de sua existência e de sua permanência apenas no cliente está registrada no relatório e nas evidências.
+A chave secreta context_private.tenseal não deve ser versionada no GitHub, pois representa material sensível. A evidência de sua existência e permanência apenas no cliente está registrada no relatório e nas evidências.
